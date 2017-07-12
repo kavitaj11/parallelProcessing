@@ -5,6 +5,7 @@
     <classes>
       <class name="com.yourcompany.Tests.FollowLinkTest"/>
       <class name="com.yourcompany.Tests.TestBase"/>
+      <class name="com.yourcompany.Tests.SampleTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
