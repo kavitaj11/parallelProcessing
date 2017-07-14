@@ -3,8 +3,8 @@
 <suite  name="Suite"   parallel = "methods" thread-count="3" data-provider-thread-count="6"> 
   <test name="Test">
     <classes>
-      <class name="com.yourcompany.Tests.FollowLinkTest"/>
-      <class name="com.yourcompany.Tests.TestBase"/>
+      <!-- <class name="com.yourcompany.Tests.FollowLinkTest"/>
+      <class name="com.yourcompany.Tests.TestBase"/> -->
       <class name="com.yourcompany.Tests.SampleTest"/>
     </classes>
   </test> <!-- Test -->

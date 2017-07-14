@@ -1,14 +1,11 @@
 package com.yourcompany.Pages;
 
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.LoadableComponent;
 
 
 
@@ -50,6 +47,14 @@ public class LoginPage{
     PageLoadHelper.isLoaded().isElementIsVisible(driver, eleUsrName)
         .isElementIsVisible(driver, elePassword).isElementIsClickable(driver, loginButton);
   }*/
+  
+  public LoginPage(WebDriver driver) {
+	  
+	  System.out.println("driver reached to login page is   "+driver);
+    this.driver = driver;
+    PageFactory.initElements(driver, this);
+
+  }
 
   public boolean isPasswordHidden() {
     if (elePassword.getAttribute("type").equals("password"))
@@ -68,7 +73,7 @@ public class LoginPage{
   }
 
   public LoginPage enterPassWord(String passWordValue) {
-    elePassword.clear();
+    //elePassword.clear();
     elePassword.sendKeys(passWordValue);
     return this;
   }
@@ -79,7 +84,7 @@ public class LoginPage{
   }
 
   public LoginPage enetrUserName(String userNameValue) {
-    eleUsrName.clear();
+    //eleUsrName.clear();
     eleUsrName.sendKeys(userNameValue);
     return this;
   }
